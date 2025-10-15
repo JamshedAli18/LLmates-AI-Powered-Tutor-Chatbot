@@ -1,7 +1,8 @@
 # chat_ui.py
 import streamlit as st
-from tutor_chain import build_prompt, get_tutor_response
-from rag_pipeline import retrieve_context
+from src.tutor_chain import build_prompt, get_tutor_response
+from src.rag_pipeline import retrieve_context
+
 
 def render_chat_interface():
     st.title("🎓 Tutorix")
@@ -42,3 +43,4 @@ def render_chat_interface():
                 st.markdown(response.content)
 
         st.session_state.messages.append({"role": "assistant", "content": response.content})
+

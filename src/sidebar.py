@@ -1,7 +1,7 @@
 # sidebar.py
 import streamlit as st
 from rag_pipeline import process_pdf
-from session_manager import save_chat, load_chat, new_chat
+from src.session_manager import save_chat, load_chat, new_chat
 import os
 from datetime import datetime
 
@@ -48,3 +48,4 @@ def render_sidebar():
     # New Chat
     if st.sidebar.button("🔄 New Chat"):
         new_chat()
+
